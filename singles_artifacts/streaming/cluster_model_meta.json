@@ -1,0 +1,45 @@
+{
+  "target": "streaming",
+  "target_col": "FIRST_WEEK_STREAMING_EQUIVALENT",
+  "singles_rollout_metric_col": "STREAMING_EQUIVALENT",
+  "horizon_weeks": 27,
+  "min_observed_weeks": 2,
+  "model_info": {
+    "cluster_feature_cols": [
+      "norm_terminal_velocity",
+      "norm_total_auc",
+      "hype_concentration",
+      "peak_proximity_weeks",
+      "cannibalization_ratio"
+    ],
+    "n_clusters": 4,
+    "random_state": 42,
+    "clustering_level": "album_meta_archetype_v2"
+  },
+  "cluster_feature_cols": [
+    "norm_terminal_velocity",
+    "norm_total_auc",
+    "hype_concentration",
+    "peak_proximity_weeks",
+    "cannibalization_ratio"
+  ],
+  "absolute_export_cols": [
+    "count_pre_release_tracks",
+    "max_single_peak_volume",
+    "total_pre_release_auc",
+    "terminal_velocity",
+    "composite_peak_momentum",
+    "expected_week1_carryover",
+    "catalog_momentum_slope",
+    "momentum_baseline_interaction",
+    "historical_single_momentum",
+    "momentum_growth_ratio",
+    "max_historical_week1_volume",
+    "is_debut_studio_album"
+  ],
+  "late_promo_fallback": {
+    "a": 1.5,
+    "t_peak": 1.0
+  },
+  "stacking_formula": "M(t)=sum_i V_i*gamma_i(t+delta_i); M_norm(t)=sum_i 1*gamma_i(t+delta_i)"
+}

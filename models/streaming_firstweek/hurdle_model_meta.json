@@ -1,0 +1,51 @@
+{
+  "architecture": "two_stage_hurdle",
+  "target": "streaming",
+  "dynamic_threshold": 3652.253250715,
+  "gatekeeper_percentile": 75,
+  "stage1": {
+    "objective": "binary",
+    "avg_cv_logloss": 0.26994962930263633,
+    "avg_cv_auc": 0.9459568858876756,
+    "final_n_estimators": 87,
+    "n_training_rows": 1832,
+    "positive_rate": 0.25
+  },
+  "stage2": {
+    "regressor_type": "voting_lgbm_ridge",
+    "artifact_format": "joblib",
+    "lgbm_n_estimators": 55,
+    "ridge_alpha": 1.0,
+    "target_transform": "log1p",
+    "inference_inverse": "expm1",
+    "avg_cv_rmse_lgbm": 0.8103432788262118,
+    "final_n_estimators": 55,
+    "n_training_rows": 458,
+    "n_unique_artists": 360
+  },
+  "feature_cols": [
+    "Archetype_Cluster",
+    "count_pre_release_tracks",
+    "max_single_peak_volume",
+    "total_pre_release_auc",
+    "terminal_velocity",
+    "composite_peak_momentum",
+    "expected_week1_carryover",
+    "catalog_momentum_slope",
+    "norm_terminal_velocity",
+    "norm_total_auc",
+    "hype_concentration",
+    "peak_proximity_weeks",
+    "cannibalization_ratio",
+    "max_historical_week1_volume",
+    "is_debut_studio_album",
+    "historical_single_momentum",
+    "momentum_growth_ratio",
+    "momentum_baseline_interaction"
+  ],
+  "target_col": "FIRST_WEEK_STREAMING_EQUIVALENT",
+  "group_col": "DISPLAY_ARTIST",
+  "cv_folds": 5,
+  "features_path": "singles_artifacts/streaming/album_meta_features.parquet",
+  "targets_path": "data/78_pre_album_albums_firstweek.csv"
+}

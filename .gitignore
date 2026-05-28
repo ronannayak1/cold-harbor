@@ -1,0 +1,10 @@
+.venv/
+.DS_Store
+*.parquet
+.venv/
+.DS_Store
+*.parquet
+*.csv
+.venv/
+.DS_Store
+*.parquet

@@ -1,0 +1,26 @@
+{
+  "objective": "tweedie",
+  "tweedie_variance_power": 1.5,
+  "cv_folds": 5,
+  "avg_cv_tweedie_loss": 94.29875305388336,
+  "avg_best_iteration": 91,
+  "n_training_rows": 41698,
+  "n_unique_artists": 18349,
+  "feature_cols": [
+    "Archetype_Cluster",
+    "count_pre_release_tracks",
+    "max_single_peak_volume",
+    "total_pre_release_auc",
+    "terminal_velocity",
+    "composite_peak_momentum",
+    "expected_week1_carryover",
+    "catalog_momentum_slope",
+    "norm_terminal_velocity",
+    "norm_total_auc",
+    "hype_concentration",
+    "peak_proximity_weeks",
+    "cannibalization_ratio"
+  ],
+  "target_col": "FIRST_WEEK_TOTAL_AE",
+  "group_col": "DISPLAY_ARTIST"
+}

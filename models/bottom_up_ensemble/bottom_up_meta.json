@@ -1,0 +1,16 @@
+{
+  "components": [
+    "streaming",
+    "song",
+    "product"
+  ],
+  "dynamic_thresholds": {
+    "streaming": 3652.253250715,
+    "song": 93.27499999999999,
+    "product": 3084.0
+  },
+  "classifier_probability_cutoff": 0.5,
+  "product_debut_cap_fraction": 0.05,
+  "n_albums": 2174,
+  "output_csv": "models/bottom_up_ensemble/reconciled_total_ae.csv"
+}
